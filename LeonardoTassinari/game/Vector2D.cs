@@ -1,6 +1,6 @@
 using System;
 
-namespace Name
+namespace Vecor2D
 {
     public class Vector2D
     {
