@@ -1,0 +1,27 @@
+# hidden files
+.idea
+.gradle/
+.vscode/
+.vs
+*.iml
+*.user
+# output folders
+bin/
+build/
+obj/
+
+# files ignored by extension
+*.class
+*.DS_Store
+deleteme/
+
+# temporary latex files
+*.toc
+*.gz
+*.log
+*.fls
+*.aux
+*.fdb_latexmk
+*.out
+*.bbl
+*.blg

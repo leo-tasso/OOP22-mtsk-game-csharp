@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <RootNamespace>OOP22_mtsk_game_csharp</RootNamespace>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="LeonardoTassinari\**" />
+    <EmbeddedResource Remove="LeonardoTassinari\**" />
+    <None Remove="LeonardoTassinari\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="LeonardoTassinari\game\Vector2D.cs" />
+    <Compile Include="LeonardoTassinari\test\Vector2DTest.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+  </ItemGroup>
+
+</Project>
