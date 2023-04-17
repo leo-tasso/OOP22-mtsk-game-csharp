@@ -15,8 +15,8 @@ public interface IInput : ICloneable
     Int32? NumberPressed { get; set; }
 
     /*
-        * Method to reset all inputs to false.
-        */
+     * Method to reset all inputs to false.
+     */
     void Reset();
 }
         
