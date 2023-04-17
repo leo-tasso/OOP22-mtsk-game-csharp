@@ -8,7 +8,7 @@ namespace OOP22_mtsk_game_csharp.LorenzoDalmonte.api
 
         void Compute(long elapsed);
 
-        List<GameObject> GetObjects();
+        IList<GameObject> GetObjects();
 
         string GetTutorial();
     }
