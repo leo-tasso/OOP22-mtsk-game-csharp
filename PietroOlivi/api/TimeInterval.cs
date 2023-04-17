@@ -1,45 +1,49 @@
 using System;
 
-/*
- * Class that models a time interval.
- */
-public class TimeInterval
+namespace OOP22_mtsk_game_csharp.PietroOlivi.api 
 {
-    private long Start { get; }
-    private long End { get; }
 
     /*
-     * Constructor for interval's bounds (in milliseconds).
+     * Class that models a time interval.
      */
-    public TimeInterval(long start, long end)
+    public class TimeInterval
     {
-        Start = start;
-        End = end;
-    }
+        private long Start { get; }
+        private long End { get; }
 
-    /*
-     * Randomly extract a value within the range.
-     */
-    public long DrawInBetween()
-    {
-        var rand = new Random(DateTime.Now.Millisecond);
-        return rand.Next((int)Start, (int)End);
-    }
+        /*
+         * Constructor for interval's bounds (in milliseconds).
+         */
+        public TimeInterval(long start, long end)
+        {
+            Start = start;
+            End = end;
+        }
 
-    public override bool Equals(object obj)
-    {
-        return obj is TimeInterval interval &&
-               Start == interval.Start &&
-               End == interval.End;
-    }
+        /*
+         * Randomly extract a value within the range.
+         */
+        public long DrawInBetween()
+        {
+            var rand = new Random(DateTime.Now.Millisecond);
+            return rand.Next((int)Start, (int)End);
+        }
 
-    public override string ToString()
-    {
-        return base.ToString();
-    }
+        public override bool Equals(object obj)
+        {
+            return obj is TimeInterval interval &&
+                Start == interval.Start &&
+                End == interval.End;
+        }
 
-    public override int GetHashCode()
-    {
-        return base.GetHashCode();
+        public override string ToString()
+        {
+            return base.ToString();
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
     }
 }
