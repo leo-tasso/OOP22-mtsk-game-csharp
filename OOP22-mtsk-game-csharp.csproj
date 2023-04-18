@@ -14,6 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="LeonardoTassinari\game\NullHitBoxModel.cs" />
+    <Compile Include="LeonardoTassinari\game\IHitBoxModel.cs" />
     <Compile Include="LeonardoTassinari\game\Vector2D.cs" />
     <Compile Include="LeonardoTassinari\test\Vector2DTest.cs" />
   </ItemGroup>

@@ -9,7 +9,7 @@ public class StepRateStratTest
     private readonly StepRateStrat s = new StepRateStrat(NUM_STEPS, STEP_VALUE, STEP_LENGTH);
 
     [Test]
-    void IntervalCheck()
+    public void IntervalCheck()
     {
         Assert.AreEqual(s.Invoke(STEP_LENGTH) - s.Invoke(0L), STEP_VALUE);
         Assert.AreEqual(s.Invoke(STEP_LENGTH * 2) - s.Invoke(0L), STEP_VALUE * 2);
@@ -17,7 +17,7 @@ public class StepRateStratTest
     }
 
    [Test]
-    void MaxValueCheck()
+    public void MaxValueCheck()
     {
         Assert.AreNotEqual(s.Invoke(STEP_LENGTH * (NUM_STEPS - 1)), s.Invoke(STEP_LENGTH * NUM_STEPS));
         Assert.AreEqual(s.Invoke(STEP_LENGTH * (NUM_STEPS + 1)), s.Invoke(STEP_LENGTH * NUM_STEPS));

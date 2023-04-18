@@ -1,4 +1,5 @@
-using Vecor2D;
+using OOP22_mtsk_game_csharp.LeonardoTassinari.game;
+using OOP22_mtsk_game_csharp.PietroOlivi.api;
 using OOP22_mtsk_game_csharp.PietroOlivi.game;
 
 namespace OOP22_mtsk_game_csharp.LorenzoDalmonte.api
@@ -41,7 +42,8 @@ namespace OOP22_mtsk_game_csharp.LorenzoDalmonte.api
                     inputModel,
                     physicsModel,
                     aspectModel,
-                    new NullHitBoxModel());
+                    new NullHitBoxModel())
+        { }
 
         public void Updateinput(IInput input, long elapsedTime) {
             Input.Update(this, input, elapsedTime);
