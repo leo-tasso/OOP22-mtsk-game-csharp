@@ -1,6 +1,7 @@
 using System;
 
-namespace Vecor2D
+namespace OOP22_mtsk_game_csharp.LeonardoTassinari.game
+
 {
     public class Vector2D
     {
@@ -23,26 +24,30 @@ namespace Vecor2D
             _y = y;
         }
 
-        public Vector2D sum(Vector2D v2)
+        public Vector2D Sum(Vector2D v2)
         {
             return new Vector2D(this.X + v2.X, this.Y + v2.Y);
         }
 
 
-        public Vector2D mul(double alpha)
+        public Vector2D Mul(double alpha)
         {
             return new Vector2D(alpha * this.X, alpha * this.Y);
         }
 
 
-        public double module()
+        public double Module()
         {
             return Math.Sqrt(this.X * this.X + this.Y * this.Y);
         }
 
-        public Vector2D invert()
+        public Vector2D Invert()
         {
             return new Vector2D(-this.X, -this.Y);
+        }
+        public static Vector2D NullVector()
+        {
+            return new Vector2D(0, 0);
         }
 
         public override bool Equals(object obj)
