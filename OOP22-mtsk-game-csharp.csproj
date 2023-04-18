@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net48</TargetFramework>
+    <TargetFramework>net7</TargetFramework>
     <RootNamespace>OOP22_mtsk_game_csharp</RootNamespace>
 
     <IsPackable>false</IsPackable>
@@ -14,8 +14,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="LeonardoTassinari\game\CatchTheSquare.cs" />
+    <Compile Include="LeonardoTassinari\game\CircleAspect.cs" />
+    <Compile Include="LeonardoTassinari\game\CircleHitBoxModel.cs" />
+    <Compile Include="LeonardoTassinari\game\Collider.cs" />
+    <Compile Include="LeonardoTassinari\game\CtsBomb.cs" />
+    <Compile Include="LeonardoTassinari\game\Defuser.cs" />
+    <Compile Include="LeonardoTassinari\game\DirectionalInput.cs" />
+    <Compile Include="LeonardoTassinari\game\ICollider.cs" />
+    <Compile Include="LeonardoTassinari\game\IncrRateStrat.cs" />
     <Compile Include="LeonardoTassinari\game\NullHitBoxModel.cs" />
     <Compile Include="LeonardoTassinari\game\IHitBoxModel.cs" />
+    <Compile Include="LeonardoTassinari\game\RectangleAspect.cs" />
+    <Compile Include="LeonardoTassinari\game\RectangleHitBoxModel.cs" />
     <Compile Include="LeonardoTassinari\game\Vector2D.cs" />
     <Compile Include="LeonardoTassinari\test\Vector2DTest.cs" />
   </ItemGroup>
