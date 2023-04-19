@@ -12,28 +12,28 @@ namespace OOP22_mtsk_game_csharp.LeonardoTassinari.test
     [TestFixture]
     public class IncrRateStratTest
     {
-        private static readonly double MAX_BOMB_RATE = 0.7;
-        private static readonly double BOMB_SPAWN_DIFF = 1.05;
-        private static readonly long START1 = 1000;
-        private static readonly long START2 = 30_000;
-        private static readonly long RANGE = 20_000;
-        private static readonly long FLAT_START1 = 50_000;
-        private static readonly long FLAT_START2 = 90_000;
-        private readonly IncrRateStrat s = new IncrRateStrat(BOMB_SPAWN_DIFF, MAX_BOMB_RATE);
+        private const double MaxBombRate = 0.7;
+        private const double BombSpawnDiff = 1.05;
+        private const long Start1 = 1000;
+        private const long Start2 = 30_000;
+        private const long Range = 20_000;
+        private const long FlatStart1 = 50_000;
+        private const long FlatStart2 = 90_000;
+        private readonly IncrRateStrat _s = new IncrRateStrat(BombSpawnDiff, MaxBombRate);
 
         [Test]
         public void IsIncreasing()
         {
 
-            Assert.True(s.Invoke(START1 + RANGE) - s.Invoke(START1) < s.Invoke(START2 + RANGE) - s.Invoke(START2));
+            Assert.True(_s.Invoke(Start1 + Range) - _s.Invoke(Start1) < _s.Invoke(Start2 + Range) - _s.Invoke(Start2));
         }
 
         [Test]
         public void IsFlattening()
         {
 
-            Assert.AreEqual(s.Invoke(FLAT_START1 + RANGE) - s.Invoke(FLAT_START1), s.Invoke(FLAT_START2 + RANGE)
-                    - s.Invoke(FLAT_START2));
+            Assert.AreEqual(_s.Invoke(FlatStart1 + Range) - _s.Invoke(FlatStart1), _s.Invoke(FlatStart2 + Range)
+                    - _s.Invoke(FlatStart2));
         }
     }
 }

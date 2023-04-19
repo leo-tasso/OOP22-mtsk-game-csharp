@@ -10,60 +10,60 @@ namespace OOP22_mtsk_game_csharp.LeonardoTassinari.game
 {
     public class CatchTheSquare : IMinigame
     {
-        private static readonly int DEFUSER_RADIUS = 100;
-        private static readonly int BOMB_SIDE = (int)(DEFUSER_RADIUS * 1.5);
-        private static readonly int MAX_OBJECT = 6;
-        private static readonly double MAX_BOMB_RATE = 0.7;
-        private static readonly double BOMB_SPAWN_DIFF = 1.05;
-        private static readonly double DUMP_COEFFICIENT = 2;
-        private static readonly double RATIO = 16 / 9d;
+        private const int DefuserRadius = 100;
+        private const int BombSide = (int)(DefuserRadius * 1.5);
+        private const int MaxObject = 6;
+        private const double MaxBombRate = 0.7;
+        private const double BombSpawnDiff = 1.05;
+        private const double DumpCoefficient = 2;
+        private const double Ratio = 16 / 9d;
 
-        private readonly int rightBound;
-        private readonly int bottomBound;
-        private long totalElapsed;
-        private int totalBombsSpawned;
-        private readonly Defuser defuser;
-        private readonly IList<GameObject> gObjects;
-        private readonly Random r;
-        private readonly Func<long, long> spawnFreqStrat;
+        private readonly int _rightBound;
+        private readonly int _bottomBound;
+        private long _totalElapsed;
+        private int _totalBombsSpawned;
+        private readonly Defuser _defuser;
+        private readonly IList<GameObject> _gObjects;
+        private readonly Random _r;
+        private readonly Func<long, long> _spawnFreqStrat;
         public CatchTheSquare(Func<long, long> spawnFreqStrat, IInputModel defuserInputModel,
              int bottomBound)
         {
-            this.gObjects = new List<GameObject>();
-            this.bottomBound = bottomBound;
-            this.rightBound = (int)(bottomBound * RATIO);
-            this.totalElapsed = 0;
-            this.totalBombsSpawned = 0;
-            this.r = new Random();
-            this.spawnFreqStrat = spawnFreqStrat;
-            defuser = new Defuser(new Point2D(rightBound / 2d, bottomBound / 2d), DEFUSER_RADIUS, defuserInputModel, new BoundaryDumpedPhysics(rightBound, bottomBound, DEFUSER_RADIUS, DUMP_COEFFICIENT));
-            gObjects.Add(defuser);
+            this._gObjects = new List<GameObject>();
+            this._bottomBound = bottomBound;
+            this._rightBound = (int)(bottomBound * Ratio);
+            this._totalElapsed = 0;
+            this._totalBombsSpawned = 0;
+            this._r = new Random();
+            this._spawnFreqStrat = spawnFreqStrat;
+            _defuser = new Defuser(new Point2D(_rightBound / 2d, bottomBound / 2d), DefuserRadius, defuserInputModel, new BoundaryDumpedPhysics(_rightBound, bottomBound, DefuserRadius, DumpCoefficient));
+            _gObjects.Add(_defuser);
         }
-        public CatchTheSquare(int bottomBound) : this(new IncrRateStrat(BOMB_SPAWN_DIFF, MAX_BOMB_RATE).Invoke, new DirectionalInput(), bottomBound)
+        public CatchTheSquare(int bottomBound) : this(new IncrRateStrat(BombSpawnDiff, MaxBombRate).Invoke, new DirectionalInput(), bottomBound)
         {
         }
         public bool IsGameOver()
         {
-            return !gObjects.Where(o => o.GetType() == typeof(CtsBomb))
+            return !_gObjects.Where(o => o.GetType() == typeof(CtsBomb))
                     .Cast<CtsBomb>()
                     .All(b => b.Timer >= 0);
         }
         public void Compute(long elapsed)
         {
-            totalElapsed += elapsed;
-            GameObject? collider = CheckCollision(defuser);
+            _totalElapsed += elapsed;
+            GameObject? collider = CheckCollision(_defuser);
             if (collider != null)
             {
-                gObjects.Remove(collider);
+                _gObjects.Remove(collider);
             }
-            if (totalBombsSpawned < spawnFreqStrat.Invoke(totalElapsed) && gObjects.Count() < MAX_OBJECT)
+            if (_totalBombsSpawned < _spawnFreqStrat.Invoke(_totalElapsed) && _gObjects.Count < MaxObject)
             {
-                gObjects.Add(new CtsBomb(RandSpawnPoint(), BOMB_SIDE, ColorRGB.Black)); // if changing bomb shape, also
+                _gObjects.Add(new CtsBomb(RandSpawnPoint(), BombSide, ColorRGB.Black)); // if changing bomb shape, also
                                                                                         // change
                                                                                         // checkCollision method
-                totalBombsSpawned++;
+                _totalBombsSpawned++;
             }
-            foreach (var b in gObjects)
+            foreach (var b in _gObjects)
             {
                 b.UpdatePhysics(elapsed, this);
             }
@@ -72,7 +72,7 @@ namespace OOP22_mtsk_game_csharp.LeonardoTassinari.game
         {
             if (defuser.Aspect is CircleAspect)
             {
-                IList<GameObject> bombs = gObjects
+                IList<GameObject> bombs = _gObjects
                         .Where(o=>o is CtsBomb)
                         //.Where(b => b.Aspect is RectangleAspect)
                         .ToList();
@@ -89,11 +89,11 @@ namespace OOP22_mtsk_game_csharp.LeonardoTassinari.game
         }
         private Point2D RandSpawnPoint()
         {
-            Point2D p = new(r.Next(BOMB_SIDE / 2, rightBound - BOMB_SIDE / 2),
-                    r.Next(BOMB_SIDE / 2, bottomBound - BOMB_SIDE / 2));
-            foreach (GameObject gameObject in gObjects)
+            Point2D p = new(_r.Next(BombSide / 2, _rightBound - BombSide / 2),
+                    _r.Next(BombSide / 2, _bottomBound - BombSide / 2));
+            foreach (GameObject gameObject in _gObjects)
             {
-                if (p.Distance(gameObject.Coor) < BOMB_SIDE * 2)
+                if (p.Distance(gameObject.Coor) < BombSide * 2)
                 {
                     return RandSpawnPoint();
                 }
@@ -102,7 +102,7 @@ namespace OOP22_mtsk_game_csharp.LeonardoTassinari.game
         }
         public IList<GameObject> GetObjects()
         {
-            return new List<GameObject>(gObjects);
+            return new List<GameObject>(_gObjects);
         }
         public String GetTutorial()
         {

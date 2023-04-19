@@ -9,10 +9,10 @@ namespace OOP22_mtsk_game_csharp.LeonardoTassinari.game
         public bool IsColliding(GameObject g, GameObject h)
         {
             if (g.HitBox is CircleHitBoxModel && h.HitBox is RectangleHitBoxModel) {
-                return circleRectangleCompare(g, h);
+                return CircleRectangleCompare(g, h);
             }
             if (h.HitBox is CircleHitBoxModel && g.HitBox is RectangleHitBoxModel) {
-                return circleRectangleCompare(h, g);
+                return CircleRectangleCompare(h, g);
             }
             if (h.HitBox is RectangleHitBoxModel && g.HitBox is RectangleHitBoxModel) {
                 return rectangleRectangleCompare(h, g);
@@ -33,7 +33,7 @@ namespace OOP22_mtsk_game_csharp.LeonardoTassinari.game
                     h.Coor.Y + h.HitBox.GetSizes()[1] / 2 > g.Coor.Y
                             - g.HitBox.GetSizes()[1] / 2;
         }
-        private bool circleRectangleCompare(GameObject circle, GameObject rectangle)
+        private bool CircleRectangleCompare(GameObject circle, GameObject rectangle)
         {
             double circleDistancex = Math.Abs(circle.Coor.X - rectangle.Coor.X);
             double rectWidth = rectangle.HitBox.GetSizes()[0];
