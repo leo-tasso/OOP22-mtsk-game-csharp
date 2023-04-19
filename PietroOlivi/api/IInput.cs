@@ -1,8 +1,7 @@
 using System;
 
 namespace OOP22_mtsk_game_csharp.PietroOlivi.api 
-{
-    
+{ 
     /*
      * Interface to model the inputs.
      */
@@ -18,8 +17,8 @@ namespace OOP22_mtsk_game_csharp.PietroOlivi.api
         Int32? NumberPressed { get; set; }
 
         /*
-        * Method to reset all inputs to false.
-        */
+         * Method to reset all inputs to false.
+         */
         void Reset();
     }
 }

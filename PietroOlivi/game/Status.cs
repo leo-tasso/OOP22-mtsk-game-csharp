@@ -1,11 +1,11 @@
 
 namespace OOP22_mtsk_game_csharp.PietroOlivi.game 
 {
-
     /*
      * Class that contains all the possible states that a mole or bomb can assume.
      */
-    public enum Status {
+    public enum Status 
+    {
 
         /*
          * The GameObject has been created and is waiting for its time to exit.

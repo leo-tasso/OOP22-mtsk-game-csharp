@@ -3,13 +3,11 @@ using OOP22_mtsk_game_csharp.PietroOlivi.api;
 
 namespace OOP22_mtsk_game_csharp.PietroOlivi.game 
 {
-
     /*
      * Interface that models a whac-a-mole game level.
      */
     public interface ILevel 
     {
-
         /*
          * The higher the level goes, the more difficult the game 
          * will be, and therefore the maximum number of moles and

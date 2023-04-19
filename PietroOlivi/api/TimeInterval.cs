@@ -2,7 +2,6 @@ using System;
 
 namespace OOP22_mtsk_game_csharp.PietroOlivi.api 
 {
-
     /*
      * Class that models a time interval.
      */
