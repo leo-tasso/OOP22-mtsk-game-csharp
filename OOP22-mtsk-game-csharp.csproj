@@ -20,6 +20,7 @@
     <Compile Include="LeonardoTassinari\Game\CircleHitBoxModel.cs" />
     <Compile Include="LeonardoTassinari\Game\Collider.cs" />
     <Compile Include="LeonardoTassinari\Game\CtsBomb.cs" />
+    <Compile Include="LeonardoTassinari\Game\CtsBombTimerPhysics.cs" />
     <Compile Include="LeonardoTassinari\Game\Defuser.cs" />
     <Compile Include="LeonardoTassinari\Game\DirectionalInput.cs" />
     <Compile Include="LeonardoTassinari\Game\ICollider.cs" />
@@ -30,6 +31,9 @@
     <Compile Include="LeonardoTassinari\Game\RectangleHitBoxModel.cs" />
     <Compile Include="LeonardoTassinari\Game\SimplePhysics.cs" />
     <Compile Include="LeonardoTassinari\Game\Vector2D.cs" />
+    <Compile Include="LeonardoTassinari\test\IncrRateStratTest.cs" />
+    <Compile Include="LeonardoTassinari\test\BombTest.cs" />
+    <Compile Include="LeonardoTassinari\test\CatchTheSquareTest.cs" />
     <Compile Include="LeonardoTassinari\test\Vector2DTest.cs" />
   </ItemGroup>
 

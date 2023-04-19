@@ -18,7 +18,7 @@ namespace OOP22_mtsk_game_csharp.LeonardoTassinari.game
         public int BottomBound { get; }
         public int DEFUSER_RADIUS { get; }
         public double DUMP_COEFFICIENT { get; }
-        public new void Update(long dt, GameObject obj, IMinigame miniGame)
+        public override void Update(long dt, GameObject obj, IMinigame miniGame)
         {
             base.Update(dt, obj, miniGame);
 
