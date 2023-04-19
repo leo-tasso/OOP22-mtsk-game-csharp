@@ -68,6 +68,6 @@ namespace OOP22_mtsk_game_csharp.LeonardoTassinari.game
             hashCode = hashCode * -1521134295 + Y.GetHashCode();
             return hashCode;
         }
-        public string StringRepresentation => "("+this.X+","+this.Y+")";
+        public string StringRepresentation => "(" + this.X + "," + this.Y + ")";
     }
 }

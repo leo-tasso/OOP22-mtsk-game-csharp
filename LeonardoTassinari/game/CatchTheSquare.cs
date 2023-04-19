@@ -36,7 +36,7 @@ namespace OOP22_mtsk_game_csharp.LeonardoTassinari.game
             this.totalBombsSpawned = 0;
             this.r = new Random();
             this.spawnFreqStrat = spawnFreqStrat;
-            defuser = new Defuser(new Point2D(rightBound / 2d, bottomBound / 2d), DEFUSER_RADIUS, defuserInputModel);
+            defuser = new Defuser(new Point2D(rightBound / 2d, bottomBound / 2d), DEFUSER_RADIUS, defuserInputModel, new BoundaryDumpedPhysics(rightBound, bottomBound, DEFUSER_RADIUS, DUMP_COEFFICIENT));
             gObjects.Add(defuser);
         }
         public CatchTheSquare(int bottomBound) : this(new IncrRateStrat(BOMB_SPAWN_DIFF, MAX_BOMB_RATE).Invoke, new DirectionalInput(), bottomBound)

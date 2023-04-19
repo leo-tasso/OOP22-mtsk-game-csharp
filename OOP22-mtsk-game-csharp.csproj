@@ -14,27 +14,33 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="LeonardoTassinari\game\CatchTheSquare.cs" />
-    <Compile Include="LeonardoTassinari\game\CircleAspect.cs" />
-    <Compile Include="LeonardoTassinari\game\CircleHitBoxModel.cs" />
-    <Compile Include="LeonardoTassinari\game\Collider.cs" />
-    <Compile Include="LeonardoTassinari\game\CtsBomb.cs" />
-    <Compile Include="LeonardoTassinari\game\Defuser.cs" />
-    <Compile Include="LeonardoTassinari\game\DirectionalInput.cs" />
-    <Compile Include="LeonardoTassinari\game\ICollider.cs" />
-    <Compile Include="LeonardoTassinari\game\IncrRateStrat.cs" />
-    <Compile Include="LeonardoTassinari\game\NullHitBoxModel.cs" />
-    <Compile Include="LeonardoTassinari\game\IHitBoxModel.cs" />
-    <Compile Include="LeonardoTassinari\game\RectangleAspect.cs" />
-    <Compile Include="LeonardoTassinari\game\RectangleHitBoxModel.cs" />
-    <Compile Include="LeonardoTassinari\game\Vector2D.cs" />
+    <Compile Include="LeonardoTassinari\Game\BoundaryDumpedPhysics.cs" />
+    <Compile Include="LeonardoTassinari\Game\CatchTheSquare.cs" />
+    <Compile Include="LeonardoTassinari\Game\CircleAspect.cs" />
+    <Compile Include="LeonardoTassinari\Game\CircleHitBoxModel.cs" />
+    <Compile Include="LeonardoTassinari\Game\Collider.cs" />
+    <Compile Include="LeonardoTassinari\Game\CtsBomb.cs" />
+    <Compile Include="LeonardoTassinari\Game\Defuser.cs" />
+    <Compile Include="LeonardoTassinari\Game\DirectionalInput.cs" />
+    <Compile Include="LeonardoTassinari\Game\ICollider.cs" />
+    <Compile Include="LeonardoTassinari\Game\IncrRateStrat.cs" />
+    <Compile Include="LeonardoTassinari\Game\NullHitBoxModel.cs" />
+    <Compile Include="LeonardoTassinari\Game\IHitBoxModel.cs" />
+    <Compile Include="LeonardoTassinari\Game\RectangleAspect.cs" />
+    <Compile Include="LeonardoTassinari\Game\RectangleHitBoxModel.cs" />
+    <Compile Include="LeonardoTassinari\Game\SimplePhysics.cs" />
+    <Compile Include="LeonardoTassinari\Game\Vector2D.cs" />
     <Compile Include="LeonardoTassinari\test\Vector2DTest.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="NUnit" Version="3.12.0" />
-    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.4.2" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
+    <PackageReference Include="StyleCop.MSBuild" Version="6.2.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>
