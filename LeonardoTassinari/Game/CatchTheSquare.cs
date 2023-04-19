@@ -74,14 +74,14 @@ namespace OOP22_mtsk_game_csharp.LeonardoTassinari.game
             {
                 IList<GameObject> bombs = gObjects
                         .Where(o=>o is CtsBomb)
-                        .Where(b=>b.Aspect is RectangleAspect)
+                        //.Where(b => b.Aspect is RectangleAspect)
                         .ToList();
                 foreach (GameObject bomb in bombs)
                 {
                     ICollider c = new Collider();
                     if (c.IsColliding(bomb, defuser))
                     {
-                        return null;
+                        return bomb;
                     }
                 }
             }

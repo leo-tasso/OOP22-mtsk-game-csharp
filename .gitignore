@@ -5,6 +5,7 @@
 .vs
 *.iml
 *.user
+*.cache
 # output folders
 bin/
 build/
