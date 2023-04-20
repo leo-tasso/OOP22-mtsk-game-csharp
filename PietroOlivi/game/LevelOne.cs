@@ -14,10 +14,6 @@ namespace OOP22_mtsk_game_csharp.PietroOlivi.game
         private static readonly long MIN_WAIT_TO_SPAWN = 5_000L;
         private static readonly long MAX_WAIT_TO_SPAWN = 15_000L;
         public static readonly long STATIONARY_TIME = 5000L;
-        
-        public LevelOne()
-        {
-        }
 
         public int GetMaxObjsSimultaneouslyOut() 
         {

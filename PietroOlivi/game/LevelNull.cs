@@ -19,7 +19,6 @@ namespace OOP22_mtsk_game_csharp.PietroOlivi.game
             return Vector2D.NullVector();
         }
 
-        
         public TimeInterval GetSpawnWaitingTime() 
         {
             return new TimeInterval(0L, 0L); 
