@@ -6,7 +6,6 @@ namespace OOP22_mtsk_game_csharp.PietroOlivi.game
      */
     public enum Status 
     {
-
         /*
          * The GameObject has been created and is waiting for its time to exit.
          */

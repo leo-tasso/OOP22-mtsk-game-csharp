@@ -9,7 +9,6 @@ namespace OOP22_mtsk_game_csharp.PietroOlivi.game
      */
     public interface IInputModel 
     {
-
         /*
          * Method to update the state of an object according the inputs.
          */

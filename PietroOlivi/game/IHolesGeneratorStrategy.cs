@@ -10,6 +10,6 @@ namespace OOP22_mtsk_game_csharp.PietroOlivi.game
         /*
          * Method responsible for placing and making holes.
          */
-        IList<WamObject> generate(int numHoles);
+        IList<WamObject> Generate(int numHoles);
     }
 }
