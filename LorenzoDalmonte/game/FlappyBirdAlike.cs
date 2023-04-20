@@ -20,7 +20,7 @@ namespace OOP22_mtsk_game_csharp.LorenzoDalmonte.game
         private readonly int _heightOffset;
         private readonly int _enemyWidth;
         private readonly int _enemySpawn;
-        private readonly IList<GameObject> _l = new List<GameObject>();
+        private IList<GameObject> _l = new List<GameObject>();
         private readonly System.Random _rand = new System.Random();
         private readonly StepRateStrat _freqStrat;
         private long _totalElapsed;
@@ -73,7 +73,7 @@ namespace OOP22_mtsk_game_csharp.LorenzoDalmonte.game
                         new RectangleHitBoxModel(_enemyWidth, _enemyHeight)));
             }
 
-            _l.Where(e => e.Coor.X < -_enemyWidth);
+            _l = _l.Where(e => e.Coor.X < -_enemyWidth).ToList();
             foreach (var e in _l)
             {
                 e.UpdatePhysics(elapsed, this);
