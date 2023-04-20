@@ -2,7 +2,8 @@ using System.Collections.Generic;
 
 namespace OOP22_mtsk_game_csharp.LorenzoDalmonte.api
 {
-    public interface IMinigame {
+    public interface IMinigame
+    {
 
         bool IsGameOver();
 

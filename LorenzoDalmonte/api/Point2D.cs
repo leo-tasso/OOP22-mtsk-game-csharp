@@ -55,7 +55,8 @@ namespace OOP22_mtsk_game_csharp.LorenzoDalmonte.api
             return this.X.GetHashCode() ^ this.Y.GetHashCode();
         }
 
-        public override bool Equals(object obj) {
+        public override bool Equals(object obj)
+        {
             return obj is Point2D p &&
                    _x == p._x &&
                    _y == p._y &&

@@ -1,7 +1,7 @@
 namespace OOP22_mtsk_game_csharp.LorenzoDalmonte.api
 {
-    public interface IDrawings {
-
+    public interface IDrawings
+    {
         void DrawCircle(GameObject obj, ColorRGB color, double radius);
 
         void DrawSquare(GameObject obj, ColorRGB color, double side, bool filled);

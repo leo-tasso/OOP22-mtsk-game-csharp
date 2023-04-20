@@ -43,17 +43,27 @@ namespace OOP22_mtsk_game_csharp.LorenzoDalmonte.api
                     physicsModel,
                     aspectModel,
                     new NullHitBoxModel())
-        { }
+        {
+        }
 
-        public void Updateinput(IInput input, long elapsedTime) {
+        public GameObject(Point2D coor, Vector2D vel)
+        {
+            Coor = coor;
+            Vel = vel;
+        }
+
+        public void Updateinput(IInput input, long elapsedTime)
+        {
             Input.Update(this, input, elapsedTime);
         }
 
-        public void UpdatePhysics(long deltaTime, IMinigame m) {
+        public void UpdatePhysics(long deltaTime, IMinigame m)
+        {
             Physics.Update(deltaTime, this, m);
         }
 
-        public void UpdateAspect(IDrawings drawing) {
+        public void UpdateAspect(IDrawings drawing)
+        {
             Aspect.Update(this, drawing);
         }
     }

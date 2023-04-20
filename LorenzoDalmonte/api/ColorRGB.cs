@@ -1,6 +1,7 @@
 namespace OOP22_mtsk_game_csharp.LorenzoDalmonte.api
 {
-    public class ColorRGB {
+    public class ColorRGB
+    {
         public static readonly int COLOR_RANGE_TOP = 255;
         public static readonly int COLOR_RANGE_BOTTOM = 0;
         private readonly int _red;
@@ -19,7 +20,8 @@ namespace OOP22_mtsk_game_csharp.LorenzoDalmonte.api
             get => _blue % (COLOR_RANGE_TOP + 1);
         }
 
-        public ColorRGB(int red, int green, int blue) {
+        public ColorRGB(int red, int green, int blue)
+        {
             _red = red;
             _green = green;
             _blue = blue;

@@ -1,21 +1,22 @@
-using System;
-
-public class StepRateStrat
+namespace OOP22_mtsk_game_csharp.LorenzoDalmonte.game
 {
-    private readonly int _numSteps;
-    private readonly int _stepValue;
-    private readonly long _stepLength;
-
-    public StepRateStrat(int numSteps, int stepValue, long stepLength)
+    public class StepRateStrat
     {
-        _numSteps = numSteps;
-        _stepValue = stepValue;
-        _stepLength = stepLength;
-    }
+        private readonly int _numSteps;
+        private readonly int _stepValue;
+        private readonly long _stepLength;
 
-    public int Invoke(long totalElapsed)
-    {
-        int x = (int) (totalElapsed / _stepLength);
-        return x >= _numSteps ? _numSteps * _stepValue : x * _stepValue;
+        public StepRateStrat(int numSteps, int stepValue, long stepLength)
+        {
+            _numSteps = numSteps;
+            _stepValue = stepValue;
+            _stepLength = stepLength;
+        }
+
+        public int Invoke(long totalElapsed)
+        {
+            int x = (int) (totalElapsed / _stepLength);
+            return x >= _numSteps ? _numSteps * _stepValue : x * _stepValue;
+        }
     }
 }
