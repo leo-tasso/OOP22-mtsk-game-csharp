@@ -6,6 +6,6 @@ namespace OOP22_mtsk_game_csharp.LeonardoTassinari.game
 {
     public interface IHitBoxModel
     {
-        IList<Double> GetSizes();
+        IList<double> GetSizes();
     }
 }

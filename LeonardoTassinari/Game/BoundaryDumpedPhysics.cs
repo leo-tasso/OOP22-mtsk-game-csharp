@@ -6,41 +6,41 @@ namespace OOP22_mtsk_game_csharp.LeonardoTassinari.game
 {
     internal class BoundaryDumpedPhysics : SimplePhysics
     {
-        public BoundaryDumpedPhysics(int rightBound, int bottomBound, int dEFUSER_RADIUS, double dUMP_COEFFICIENT)
+        public BoundaryDumpedPhysics(int rightBound, int bottomBound, int defuserRadius, double dumpCoefficient)
         {
             RightBound = rightBound;
             BottomBound = bottomBound;
-            DEFUSER_RADIUS = dEFUSER_RADIUS;
-            DUMP_COEFFICIENT = dUMP_COEFFICIENT;
+            DefuserRadius = defuserRadius;
+            DumpCoefficient = dumpCoefficient;
         }
 
         public int RightBound { get; }
         public int BottomBound { get; }
-        public int DEFUSER_RADIUS { get; }
-        public double DUMP_COEFFICIENT { get; }
+        public int DefuserRadius { get; }
+        public double DumpCoefficient { get; }
         public override void Update(long dt, GameObject obj, IMinigame miniGame)
         {
             base.Update(dt, obj, miniGame);
 
-            if (obj.Coor.Y > BottomBound - DEFUSER_RADIUS)
+            if (obj.Coor.Y > BottomBound - DefuserRadius)
             {
-                obj.Coor = new Point2D(obj.Coor.X, BottomBound - DEFUSER_RADIUS);
-                obj.Vel = new Vector2D(obj.Vel.X, -Math.Abs(obj.Vel.Y / DUMP_COEFFICIENT));
+                obj.Coor = new Point2D(obj.Coor.X, BottomBound - DefuserRadius);
+                obj.Vel = new Vector2D(obj.Vel.X, -Math.Abs(obj.Vel.Y / DumpCoefficient));
             }
-            if (obj.Coor.X > RightBound - DEFUSER_RADIUS)
+            if (obj.Coor.X > RightBound - DefuserRadius)
             {
-                obj.Coor = new Point2D(RightBound - DEFUSER_RADIUS, obj.Coor.Y);
-                obj.Vel = new Vector2D(-Math.Abs(obj.Vel.X / DUMP_COEFFICIENT), obj.Vel.Y);
+                obj.Coor = new Point2D(RightBound - DefuserRadius, obj.Coor.Y);
+                obj.Vel = new Vector2D(-Math.Abs(obj.Vel.X / DumpCoefficient), obj.Vel.Y);
             }
-            if (obj.Coor.X < 0 + DEFUSER_RADIUS)
+            if (obj.Coor.X < 0 + DefuserRadius)
             {
-                obj.Coor = new Point2D(DEFUSER_RADIUS, obj.Coor.Y);
-                obj.Vel = new Vector2D(Math.Abs(obj.Vel.X / DUMP_COEFFICIENT), obj.Vel.Y);
+                obj.Coor = new Point2D(DefuserRadius, obj.Coor.Y);
+                obj.Vel = new Vector2D(Math.Abs(obj.Vel.X / DumpCoefficient), obj.Vel.Y);
             }
-            if (obj.Coor.Y < 0 + DEFUSER_RADIUS)
+            if (obj.Coor.Y < 0 + DefuserRadius)
             {
-                obj.Coor = new Point2D(obj.Coor.X, DEFUSER_RADIUS);
-                obj.Vel = new Vector2D(obj.Vel.X, Math.Abs(obj.Vel.Y / DUMP_COEFFICIENT));
+                obj.Coor = new Point2D(obj.Coor.X, DefuserRadius);
+                obj.Vel = new Vector2D(obj.Vel.X, Math.Abs(obj.Vel.Y / DumpCoefficient));
 
             }
         }
