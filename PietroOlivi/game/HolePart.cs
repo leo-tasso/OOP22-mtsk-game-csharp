@@ -5,7 +5,7 @@ namespace OOP22_mtsk_game_csharp.PietroOlivi.game
     /*
      * Class that models an hole's section in the Whac-a-Mole minigame.
      */
-    internal class HolePart : WamObject
+    public class HolePart : WamObject
     {
         /*
          * Simple constructor aimed at initializing hole's section fields.
