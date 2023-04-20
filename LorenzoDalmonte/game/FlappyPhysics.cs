@@ -16,7 +16,7 @@ namespace OOP22_mtsk_game_csharp.LorenzoDalmonte.game
             this._cursorOffset = cursorSize / 2;
         }
 
-        public void update(long dt, GameObject obj, IMinigame miniGame)
+        public override void Update(long dt, GameObject obj, IMinigame miniGame)
         {
             base.Update(dt, obj, miniGame);
             bool onGround = obj.Coor.Y >= Y_MAX - _cursorOffset;
