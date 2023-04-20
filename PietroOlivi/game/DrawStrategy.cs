@@ -7,7 +7,7 @@ namespace OOP22_mtsk_game_csharp.PietroOlivi.game
     /*
      * Class that implements a simple draw of GameObjects.
      */
-    public class DrawStrategyImpl : IDrawStrategy 
+    public class DrawStrategy : IDrawStrategy 
     {
         private static readonly long SAFETY_TIME_MARGIN = 10L;
         private static readonly Random RANDOM = new Random();
@@ -18,7 +18,7 @@ namespace OOP22_mtsk_game_csharp.PietroOlivi.game
          * in the game, from which to take the initial 
          * coordinates of the created objects. 
          */
-        public DrawStrategyImpl(IList<GameObject> holes) 
+        public DrawStrategy(IList<GameObject> holes) 
         {
             _holes = new List<GameObject>();
             foreach(var hole in holes)
