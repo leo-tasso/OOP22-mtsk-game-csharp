@@ -3,7 +3,7 @@ using System;
 
 namespace OOP22_mtsk_game_csharp.LeonardoTassinari.game
 {
-    internal class RectangleHitBoxModel : IHitBoxModel
+    public class RectangleHitBoxModel : IHitBoxModel
     {
         private readonly List<double> _sizes;
         public RectangleHitBoxModel(double side1, double side2)
