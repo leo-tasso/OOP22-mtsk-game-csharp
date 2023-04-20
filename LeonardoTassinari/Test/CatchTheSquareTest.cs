@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 #nullable enable
-namespace OOP22_mtsk_game_csharp.LeonardoTassinari.test
+namespace OOP22_mtsk_game_csharp.LeonardoTassinari.Test
 {
     [TestFixture]
     public class CatchTheSquareTest

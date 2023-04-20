@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOP22_mtsk_game_csharp.LeonardoTassinari.test
+namespace OOP22_mtsk_game_csharp.LeonardoTassinari.Test
 {
     [TestFixture]
     public class IncrRateStratTest
