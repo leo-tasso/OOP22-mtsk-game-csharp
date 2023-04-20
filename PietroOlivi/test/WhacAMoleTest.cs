@@ -19,7 +19,7 @@ namespace OOP22_mtsk_game_csharp.PietroOlivi.test
         private static readonly int FRAME_HEIGHT = 900;
 
         [Test]
-        void hitMoleTest() 
+        public void HitMoleTest() 
         {
             IMinigame wam = new WhacAMole(FRAME_HEIGHT);
 
@@ -49,7 +49,7 @@ namespace OOP22_mtsk_game_csharp.PietroOlivi.test
         }
 
         [Test]
-        void missMoleTest() 
+        public void MissMoleTest() 
         {
             IMinigame wam = new WhacAMole(FRAME_HEIGHT);
 
@@ -77,7 +77,7 @@ namespace OOP22_mtsk_game_csharp.PietroOlivi.test
         }
 
         [Test]
-        void hitWamBombTest() 
+        public void HitWamBombTest() 
         {
             IMinigame wam = new WhacAMole(FRAME_HEIGHT);
 
@@ -89,7 +89,7 @@ namespace OOP22_mtsk_game_csharp.PietroOlivi.test
             {
                 /* I iterate until at least one bomb is drawn and actually */
                 /* comes out of one of the holes becoming hittable         */
-                deleteMoles(wam);
+                DeleteMoles(wam);
                 wam.Compute(ELAPSED_TIME);
             }
 
@@ -106,7 +106,7 @@ namespace OOP22_mtsk_game_csharp.PietroOlivi.test
         }
 
         [Test]
-        void missWamBombTest() 
+        public void MissWamBombTest() 
         {
             IMinigame wam = new WhacAMole(FRAME_HEIGHT);
 
@@ -116,7 +116,7 @@ namespace OOP22_mtsk_game_csharp.PietroOlivi.test
                     .Where(o => o is WamBomb)
                     .Any(o => !(((WamObject) o).GetAppearanceTime() < ((WhacAMole) wam).CurrentTime))) 
             {
-                deleteMoles(wam);
+                DeleteMoles(wam);
                 wam.Compute(ELAPSED_TIME);
             }
 
@@ -141,7 +141,7 @@ namespace OOP22_mtsk_game_csharp.PietroOlivi.test
          * handling their input (not hitting them) they could be the
          * cause of the gameOver and produce a "false positive" test.
          */
-        private void deleteMoles(IMinigame wam) 
+        private void DeleteMoles(IMinigame wam) 
         {
             List<WamObject> objs = new List<WamObject>();
             foreach(WamObject o in wam.GetObjects().Cast<WamObject>())

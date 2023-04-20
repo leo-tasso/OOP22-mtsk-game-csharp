@@ -34,7 +34,7 @@ namespace OOP22_mtsk_game_csharp.PietroOlivi.game
             _levels = new List<ILevel>{new LevelOne()};
             IHolesGeneratorStrategy holesGen = new SquareHolesGenerator(fieldHeight);
             _objs = new List<WamObject>(holesGen.Generate(NUM_HOLES));
-            _draw = new DrawStrategy(new List<GameObject>(_objs.GetRange(NUM_HOLES, _objs.Count)));
+            _draw = new DrawStrategy(new List<GameObject>(_objs.GetRange(NUM_HOLES, _objs.Count - NUM_HOLES)));
             _currentLevel = _levels[0];
             _numDraws = 0;
         }
