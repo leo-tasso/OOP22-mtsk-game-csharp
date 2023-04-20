@@ -11,7 +11,6 @@ namespace OOP22_mtsk_game_csharp.PietroOlivi.game
      */
     public interface IDrawStrategy 
     {
-
         /*
          * Method for randomly drawing moles and/or bombs.
          */

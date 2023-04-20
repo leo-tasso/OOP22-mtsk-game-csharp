@@ -3,7 +3,7 @@ using OOP22_mtsk_game_csharp.LorenzoDalmonte.api;
 
 namespace OOP22_mtsk_game_csharp.PietroOlivi.game
 {
-    /**
+    /*
      * Class that models the bomb character in the Whac-a-Mole minigame.
      */
     public class WamBomb : WamObject
