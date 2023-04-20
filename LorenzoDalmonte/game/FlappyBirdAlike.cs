@@ -73,7 +73,7 @@ namespace OOP22_mtsk_game_csharp.LorenzoDalmonte.game
                         new RectangleHitBoxModel(_enemyWidth, _enemyHeight)));
             }
 
-            _l = _l.Where(e => e.Coor.X < -_enemyWidth).ToList();
+            _l = _l.Where(e => e.Coor.X >= -_enemyWidth).ToList();
             foreach (var e in _l)
             {
                 e.UpdatePhysics(elapsed, this);
