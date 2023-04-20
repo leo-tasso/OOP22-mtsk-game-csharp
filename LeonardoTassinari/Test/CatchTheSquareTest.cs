@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using OOP22_mtsk_game_csharp.LeonardoTassinari.game;
+using OOP22_mtsk_game_csharp.LeonardoTassinari.Game;
 using OOP22_mtsk_game_csharp.LorenzoDalmonte.api;
 using OOP22_mtsk_game_csharp.PietroOlivi.api;
 using OOP22_mtsk_game_csharp.PietroOlivi.game;
@@ -9,8 +9,8 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace OOP22_mtsk_game_csharp.LeonardoTassinari.test
+#nullable enable
+namespace OOP22_mtsk_game_csharp.LeonardoTassinari.Test
 {
     [TestFixture]
     public class CatchTheSquareTest
@@ -76,28 +76,27 @@ namespace OOP22_mtsk_game_csharp.LeonardoTassinari.test
                 }
             }
         }
-        /*
         [Test]
         public void TestControls()
         {
-            foreach (IInputModel inputModel in InputModelStrats)
+            foreach (IInputModel inputModel in INPUT_MODEL_STRATS)
             {
-                foreach (Func<long, long> spawnStrat in SpawnStrats)
+                foreach (Func<long, long> spawnStrat in SPAWN_STRATS)
                 {
                     IMinigame cTS = new CatchTheSquare(spawnStrat,
-                            inputModel, FRAME_HEIGHT);
+                            inputModel, FrameHeight);
                     IInput input = new KeyboardInput();
                     input.MoveDown = true;
                     foreach (GameObject o in cTS.GetObjects())
                     {
-                        o.Updateinput(input, ELAPSED_TIME);
+                        o.Updateinput(input, ElapsedTime);
                     }
-                    cTS.Compute(ELAPSED_TIME);
+                    cTS.Compute(ElapsedTime);
                     Assert.AreNotEqual(cTS.GetObjects()[0].Vel, Vector2D.NullVector());
-                    Assert.AreNotEqual(cTS.GetObjects()[0].Coor, new Point2D(BOUND_LENGHT / 2, BOUND_HEIGHT / 2));
+                    Assert.AreNotEqual(cTS.GetObjects()[0].Coor, new Point2D(BoundLenght / 2, BoundHeight / 2));
                 }
             }
-        }*/
+        }
         [Test]
         public void TestBoundary()
         {

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
-using OOP22_mtsk_game_csharp.LeonardoTassinari.game;
+using OOP22_mtsk_game_csharp.LeonardoTassinari.Game;
 using OOP22_mtsk_game_csharp.LorenzoDalmonte.api;
 using OOP22_mtsk_game_csharp.PietroOlivi.game;
 
@@ -73,7 +73,7 @@ namespace OOP22_mtsk_game_csharp.LorenzoDalmonte.game
                         new RectangleHitBoxModel(_enemyWidth, _enemyHeight)));
             }
 
-            _l = _l.Where(e => e.Coor.X < -_enemyWidth).ToList();
+            _l = _l.Where(e => e.Coor.X >= -_enemyWidth).ToList();
             foreach (var e in _l)
             {
                 e.UpdatePhysics(elapsed, this);

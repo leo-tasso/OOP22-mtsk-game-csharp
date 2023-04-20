@@ -1,5 +1,5 @@
 using System;
-using OOP22_mtsk_game_csharp.LeonardoTassinari.game;
+using OOP22_mtsk_game_csharp.LeonardoTassinari.Game;
 using OOP22_mtsk_game_csharp.LorenzoDalmonte.api;
 using OOP22_mtsk_game_csharp.PietroOlivi.game;
 

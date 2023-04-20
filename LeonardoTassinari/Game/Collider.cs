@@ -2,19 +2,22 @@
 using System;
 using OOP22_mtsk_game_csharp.LorenzoDalmonte.api;
 
-namespace OOP22_mtsk_game_csharp.LeonardoTassinari.game
+namespace OOP22_mtsk_game_csharp.LeonardoTassinari.Game
 {
     internal class Collider : ICollider
     {
         public bool IsColliding(GameObject g, GameObject h)
         {
-            if (g.HitBox is CircleHitBoxModel && h.HitBox is RectangleHitBoxModel) {
+            if (g.HitBox is CircleHitBoxModel && h.HitBox is RectangleHitBoxModel)
+            {
                 return CircleRectangleCompare(g, h);
             }
-            if (h.HitBox is CircleHitBoxModel && g.HitBox is RectangleHitBoxModel) {
+            if (h.HitBox is CircleHitBoxModel && g.HitBox is RectangleHitBoxModel)
+            {
                 return CircleRectangleCompare(h, g);
             }
-            if (h.HitBox is RectangleHitBoxModel && g.HitBox is RectangleHitBoxModel) {
+            if (h.HitBox is RectangleHitBoxModel && g.HitBox is RectangleHitBoxModel)
+            {
                 return rectangleRectangleCompare(h, g);
             }
             return false;

@@ -2,7 +2,7 @@
 using OOP22_mtsk_game_csharp.PietroOlivi.api;
 using OOP22_mtsk_game_csharp.PietroOlivi.game;
 
-namespace OOP22_mtsk_game_csharp.LeonardoTassinari.game
+namespace OOP22_mtsk_game_csharp.LeonardoTassinari.Game
 {
     internal class DirectionalInput : IInputModel
     {
@@ -14,16 +14,16 @@ namespace OOP22_mtsk_game_csharp.LeonardoTassinari.game
             {
                 obj.Vel = new Vector2D(obj.Vel.X, obj.Vel.Y - ChangeCoefficent * elapsedTime);
             }
-            if (c.MoveUp)
+            if (c.MoveDown)
             {
                 obj.Vel = new Vector2D(obj.Vel.X, obj.Vel.Y + ChangeCoefficent * elapsedTime);
             }
-            if (c.MoveUp)
+            if (c.MoveLeft)
             {
 
                 obj.Vel = new Vector2D(obj.Vel.X - ChangeCoefficent * elapsedTime, obj.Vel.Y);
             }
-            if (c.MoveUp)
+            if (c.MoveRight)
             {
                 obj.Vel = new Vector2D(obj.Vel.X + ChangeCoefficent * elapsedTime, obj.Vel.Y);
             }

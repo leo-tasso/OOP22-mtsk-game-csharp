@@ -23,11 +23,11 @@ namespace OOP22_mtsk_game_csharp.PietroOlivi.test
         {
             IMinigame wam = new WhacAMole(FRAME_HEIGHT);
 
-            while (wam.GetObjects()
-                    .Any(o => !(o is Mole))
-                || wam.GetObjects()
+            while (!wam.GetObjects()
+                    .Any(o => o is Mole)
+                || !wam.GetObjects()
                     .Where(o => o is Mole)
-                    .Any(o => !(((WamObject) o).GetAppearanceTime() < ((WhacAMole) wam).CurrentTime)))
+                    .Any(o => ((WamObject) o).GetAppearanceTime() < ((WhacAMole) wam).CurrentTime))
             {
                 /* I iterate until at least one mole is drawn and actually */
                 /* comes out of one of the holes becoming hittable         */ 
@@ -38,7 +38,7 @@ namespace OOP22_mtsk_game_csharp.PietroOlivi.test
             /* problems, as if they aren't hit they won't alter the GameOver value */
             WamObject? moleToHit = wam.GetObjects()
                     .Where(o => o is Mole)
-                    .Cast<WamObject>()
+                    .Select(o => (WamObject) o)
                     .OrderBy(o => o.GetAppearanceTime())
                     .First();
 
@@ -53,11 +53,11 @@ namespace OOP22_mtsk_game_csharp.PietroOlivi.test
         {
             IMinigame wam = new WhacAMole(FRAME_HEIGHT);
 
-            while (wam.GetObjects()
-                    .Any(o => !(o is Mole))
-                || wam.GetObjects()
+            while (!wam.GetObjects()
+                    .Any(o => o is Mole)
+                || !wam.GetObjects()
                     .Where(o => o is Mole)
-                    .Any(o => !(((WamObject) o).GetStatus().Equals(Status.IN_MOTION))))
+                    .Any(o => ((WamObject) o).GetStatus().Equals(Status.IN_MOTION)))
             {
                 wam.Compute(ELAPSED_TIME);
             }
@@ -81,11 +81,11 @@ namespace OOP22_mtsk_game_csharp.PietroOlivi.test
         {
             IMinigame wam = new WhacAMole(FRAME_HEIGHT);
 
-            while (wam.GetObjects()
-                    .Any(o => !(o is WamBomb))
-                || wam.GetObjects()
+            while (!wam.GetObjects()
+                    .Any(o => o is WamBomb)
+                || !wam.GetObjects()
                     .Where(o => o is WamBomb)
-                    .Any(o => !(((WamObject) o).GetStatus().Equals(Status.IN_MOTION)))) 
+                    .Any(o => ((WamObject) o).GetStatus().Equals(Status.IN_MOTION)))
             {
                 /* I iterate until at least one bomb is drawn and actually */
                 /* comes out of one of the holes becoming hittable         */
@@ -110,11 +110,11 @@ namespace OOP22_mtsk_game_csharp.PietroOlivi.test
         {
             IMinigame wam = new WhacAMole(FRAME_HEIGHT);
 
-            while (wam.GetObjects()
-                    .Any(o => !(o is WamBomb))
-                || wam.GetObjects()
+            while (!wam.GetObjects()
+                    .Any(o => o is WamBomb)
+                || !wam.GetObjects()
                     .Where(o => o is WamBomb)
-                    .Any(o => !(((WamObject) o).GetAppearanceTime() < ((WhacAMole) wam).CurrentTime))) 
+                    .Any(o => ((WamObject) o).GetAppearanceTime() < ((WhacAMole) wam).CurrentTime))
             {
                 DeleteMoles(wam);
                 wam.Compute(ELAPSED_TIME);

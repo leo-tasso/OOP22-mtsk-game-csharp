@@ -1,10 +1,12 @@
 using System.Linq;
+using NUnit.Framework;
 using OOP22_mtsk_game_csharp.LorenzoDalmonte.api;
 using OOP22_mtsk_game_csharp.LorenzoDalmonte.game;
 using OOP22_mtsk_game_csharp.PietroOlivi.api;
 
 namespace OOP22_mtsk_game_csharp.LorenzoDalmonte.test
 {
+    [TestFixture]
     class FlappyBirdAlikeTest
     {
         private static readonly int CURSOR_INDEX = 0;
@@ -16,7 +18,7 @@ namespace OOP22_mtsk_game_csharp.LorenzoDalmonte.test
         private static readonly long ELAPSED_TIME = 10L;
 
         [Test]
-        void BoundaryCheck()
+        public void BoundaryCheck()
         {
             IMinigame m = new FlappyBirdAlike();
             Assert.AreEqual(m.GetObjects().ElementAt(CURSOR_INDEX).Coor.Y, LIMIT_BOTTOM);
@@ -40,7 +42,7 @@ namespace OOP22_mtsk_game_csharp.LorenzoDalmonte.test
         }
 
         [Test]
-        void ClosestObstacleCheck()
+        public void ClosestObstacleCheck()
         {
             IMinigame m = new FlappyBirdAlike();
             while (m.GetObjects().Count < 3)
@@ -52,7 +54,7 @@ namespace OOP22_mtsk_game_csharp.LorenzoDalmonte.test
         }
 
         [Test]
-        void HitboxCheck()
+        public void HitboxCheck()
         {
             IMinigame m = new FlappyBirdAlike();
             while (m.GetObjects().Count == 1
@@ -71,7 +73,7 @@ namespace OOP22_mtsk_game_csharp.LorenzoDalmonte.test
         }
 
         [Test]
-        void SpeedCheck()
+        public void SpeedCheck()
         {
             IMinigame m = new FlappyBirdAlike();
             while (m.GetObjects().Count == 1)

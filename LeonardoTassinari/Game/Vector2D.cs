@@ -1,6 +1,6 @@
 using System;
 
-namespace OOP22_mtsk_game_csharp.LeonardoTassinari.game
+namespace OOP22_mtsk_game_csharp.LeonardoTassinari.Game
 
 {
     public class Vector2D
