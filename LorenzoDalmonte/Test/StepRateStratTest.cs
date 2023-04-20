@@ -1,7 +1,7 @@
 using NUnit.Framework;
-using OOP22_mtsk_game_csharp.LorenzoDalmonte.game;
+using OOP22_mtsk_game_csharp.LorenzoDalmonte.Game;
 
-namespace OOP22_mtsk_game_csharp.LorenzoDalmonte.test
+namespace OOP22_mtsk_game_csharp.LorenzoDalmonte.Test
 {
     [TestFixture]
     public class StepRateStratTest

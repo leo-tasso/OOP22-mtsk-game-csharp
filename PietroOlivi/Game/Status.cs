@@ -1,5 +1,4 @@
-
-namespace OOP22_mtsk_game_csharp.PietroOlivi.game 
+namespace OOP22_mtsk_game_csharp.PietroOlivi.Game 
 {
     /*
      * Class that contains all the possible states that a mole or bomb can assume.

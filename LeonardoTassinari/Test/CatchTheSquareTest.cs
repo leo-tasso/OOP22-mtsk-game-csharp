@@ -1,14 +1,12 @@
 ﻿using NUnit.Framework;
 using OOP22_mtsk_game_csharp.LeonardoTassinari.Game;
-using OOP22_mtsk_game_csharp.LorenzoDalmonte.api;
-using OOP22_mtsk_game_csharp.PietroOlivi.api;
-using OOP22_mtsk_game_csharp.PietroOlivi.game;
+using OOP22_mtsk_game_csharp.LorenzoDalmonte.Api;
+using OOP22_mtsk_game_csharp.PietroOlivi.Api;
+using OOP22_mtsk_game_csharp.PietroOlivi.Game;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
+
 #nullable enable
 namespace OOP22_mtsk_game_csharp.LeonardoTassinari.Test
 {

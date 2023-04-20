@@ -1,11 +1,11 @@
 using System;
 using System.Linq;
 using NUnit.Framework;
-using OOP22_mtsk_game_csharp.LorenzoDalmonte.api;
-using OOP22_mtsk_game_csharp.LorenzoDalmonte.game;
-using OOP22_mtsk_game_csharp.PietroOlivi.api;
+using OOP22_mtsk_game_csharp.LorenzoDalmonte.Api;
+using OOP22_mtsk_game_csharp.LorenzoDalmonte.Game;
+using OOP22_mtsk_game_csharp.PietroOlivi.Api;
 
-namespace OOP22_mtsk_game_csharp.LorenzoDalmonte.test
+namespace OOP22_mtsk_game_csharp.LorenzoDalmonte.Test
 {
     [TestFixture]
     public class DodgeATriangleTest
@@ -18,26 +18,30 @@ namespace OOP22_mtsk_game_csharp.LorenzoDalmonte.test
         private static readonly int MOVES = 7;
 
         [Test]
-        void HitboxCheck()
+        public void HitboxCheck()
         {
+
             IMinigame m = new DodgeATriangle();
             Point2D center = m.GetObjects().ElementAt(0).Coor;
 
-            while (m.GetObjects().Count == 2 // The first elem is an istance of Slots
-                || center.Y != m.GetObjects().ElementAt(2).Coor.Y)
+            while (m.GetObjects().Count <= 2 // The first elem is an istance of Slots
+                   || center.Y != m.GetObjects().ElementAt(2).Coor.Y)
             {
                 m.Compute(ELAPSED_TIME);
+                m.IsGameOver();
             }
+
             for (int i = 0; i < CYCLES; i++)
             {
                 m.Compute(ELAPSED_TIME);
                 m.IsGameOver();
             }
+
             Assert.IsTrue(m.IsGameOver());
         }
 
         [Test]
-        void BoundaryTest()
+        public void BoundaryTest()
         {
             IMinigame m = new DodgeATriangle();
             IInput input = new KeyboardInput();

@@ -1,7 +1,6 @@
+using OOP22_mtsk_game_csharp.LorenzoDalmonte.Api;
 
-using OOP22_mtsk_game_csharp.LorenzoDalmonte.api;
-
-namespace OOP22_mtsk_game_csharp.PietroOlivi.game 
+namespace OOP22_mtsk_game_csharp.PietroOlivi.Game 
 {
     /*
      * Class that models the mole character in the Whac-a-Mole minigame.

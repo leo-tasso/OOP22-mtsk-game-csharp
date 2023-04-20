@@ -1,7 +1,7 @@
 using OOP22_mtsk_game_csharp.LeonardoTassinari.Game;
 using System;
 
-namespace OOP22_mtsk_game_csharp.LorenzoDalmonte.api
+namespace OOP22_mtsk_game_csharp.LorenzoDalmonte.Api
 {
     public class Point2D
     {

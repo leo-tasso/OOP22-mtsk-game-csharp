@@ -1,7 +1,7 @@
 using OOP22_mtsk_game_csharp.LeonardoTassinari.Game;
-using OOP22_mtsk_game_csharp.PietroOlivi.api;
+using OOP22_mtsk_game_csharp.PietroOlivi.Api;
 
-namespace OOP22_mtsk_game_csharp.PietroOlivi.game
+namespace OOP22_mtsk_game_csharp.PietroOlivi.Game
 {
     /*
      * Class representing a level to be assigned 

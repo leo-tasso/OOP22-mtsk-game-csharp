@@ -1,6 +1,6 @@
-using OOP22_mtsk_game_csharp.LorenzoDalmonte.api;
+using OOP22_mtsk_game_csharp.LorenzoDalmonte.Api;
 
-namespace OOP22_mtsk_game_csharp.PietroOlivi.game
+namespace OOP22_mtsk_game_csharp.PietroOlivi.Game
 {
     /*
      * Class that models an hole's section in the Whac-a-Mole minigame.

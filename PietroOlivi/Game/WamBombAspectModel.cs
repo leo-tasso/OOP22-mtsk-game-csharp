@@ -1,6 +1,6 @@
-using OOP22_mtsk_game_csharp.LorenzoDalmonte.api;
+using OOP22_mtsk_game_csharp.LorenzoDalmonte.Api;
 
-namespace OOP22_mtsk_game_csharp.PietroOlivi.game 
+namespace OOP22_mtsk_game_csharp.PietroOlivi.Game 
 {
     /*
      * I order to draw the Bomb only if it has actually 

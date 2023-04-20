@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using OOP22_mtsk_game_csharp.LeonardoTassinari.Game;
-using OOP22_mtsk_game_csharp.LorenzoDalmonte.api;
+using OOP22_mtsk_game_csharp.LorenzoDalmonte.Api;
 
-namespace OOP22_mtsk_game_csharp.PietroOlivi.game
+namespace OOP22_mtsk_game_csharp.PietroOlivi.Game
 {
     /*
      * Class that manages the creation and location of dens from 

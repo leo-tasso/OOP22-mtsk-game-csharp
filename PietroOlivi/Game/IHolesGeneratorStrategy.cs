@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace OOP22_mtsk_game_csharp.PietroOlivi.game
+namespace OOP22_mtsk_game_csharp.PietroOlivi.Game
 {
     /*
      * Interface for the burrow placement and creation algorithm.

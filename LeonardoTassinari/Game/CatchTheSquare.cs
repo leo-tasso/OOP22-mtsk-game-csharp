@@ -1,5 +1,5 @@
-﻿using OOP22_mtsk_game_csharp.LorenzoDalmonte.api;
-using OOP22_mtsk_game_csharp.PietroOlivi.game;
+﻿using OOP22_mtsk_game_csharp.LorenzoDalmonte.Api;
+using OOP22_mtsk_game_csharp.PietroOlivi.Game;
 using System;
 using System.Collections.Generic;
 using System.Linq;
