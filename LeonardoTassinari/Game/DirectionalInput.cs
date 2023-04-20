@@ -2,7 +2,7 @@
 using OOP22_mtsk_game_csharp.PietroOlivi.api;
 using OOP22_mtsk_game_csharp.PietroOlivi.game;
 
-namespace OOP22_mtsk_game_csharp.LeonardoTassinari.game
+namespace OOP22_mtsk_game_csharp.LeonardoTassinari.Game
 {
     internal class DirectionalInput : IInputModel
     {

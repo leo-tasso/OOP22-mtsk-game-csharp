@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using OOP22_mtsk_game_csharp.LeonardoTassinari.game;
+using OOP22_mtsk_game_csharp.LeonardoTassinari.Game;
 using OOP22_mtsk_game_csharp.LorenzoDalmonte.api;
 using System;
 

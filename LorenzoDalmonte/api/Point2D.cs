@@ -1,4 +1,4 @@
-using OOP22_mtsk_game_csharp.LeonardoTassinari.game;
+using OOP22_mtsk_game_csharp.LeonardoTassinari.Game;
 using System;
 
 namespace OOP22_mtsk_game_csharp.LorenzoDalmonte.api

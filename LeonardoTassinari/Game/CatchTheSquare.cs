@@ -6,7 +6,7 @@ using System.Linq;
 
 #nullable enable
 
-namespace OOP22_mtsk_game_csharp.LeonardoTassinari.game
+namespace OOP22_mtsk_game_csharp.LeonardoTassinari.Game
 {
     public class CatchTheSquare : IMinigame
     {
@@ -73,7 +73,7 @@ namespace OOP22_mtsk_game_csharp.LeonardoTassinari.game
             if (defuser.Aspect is CircleAspect)
             {
                 IList<GameObject> bombs = _gObjects
-                        .Where(o=>o is CtsBomb)
+                        .Where(o => o is CtsBomb)
                         //.Where(b => b.Aspect is RectangleAspect)
                         .ToList();
                 foreach (GameObject bomb in bombs)

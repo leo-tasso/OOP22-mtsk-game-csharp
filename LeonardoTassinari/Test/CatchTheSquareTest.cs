@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using OOP22_mtsk_game_csharp.LeonardoTassinari.game;
+using OOP22_mtsk_game_csharp.LeonardoTassinari.Game;
 using OOP22_mtsk_game_csharp.LorenzoDalmonte.api;
 using OOP22_mtsk_game_csharp.PietroOlivi.api;
 using OOP22_mtsk_game_csharp.PietroOlivi.game;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
-
+#nullable enable
 namespace OOP22_mtsk_game_csharp.LeonardoTassinari.test
 {
     [TestFixture]
